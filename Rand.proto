@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pkg_Rand;
+
+// service def
+service RandValues {
+    rpc RandValue(RandRequest) returns (RandResponse) {}
+}
+
+// request message
+message RandRequest {
+    bool SendText = 1;
+    bool SendNumber = 2;
+    int64 TextLength = 3;
+    int64 NumberFloor = 4;
+    int64 NumberCeiling  = 5;
+}
+
+// response message
+message RandResponse {
+    string Text = 1;
+    int64 Number = 2; 
+}

@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Rand.proto',
   package='pkg_Rand',
   syntax='proto3',
-  serialized_pb=_b('\n\nRand.proto\x12\x08pkg_Rand\"s\n\x0bRandRequest\x12\x10\n\x08SendText\x18\x01 \x01(\x08\x12\x12\n\nSendNumber\x18\x02 \x01(\x08\x12\x12\n\nTextLength\x18\x03 \x01(\x03\x12\x13\n\x0bNumberFloor\x18\x04 \x01(\x03\x12\x15\n\rNumberCeiling\x18\x05 \x01(\x03\",\n\x0cRandResponse\x12\x0c\n\x04Text\x18\x01 \x01(\t\x12\x0e\n\x06Number\x18\x02 \x01(\x03\x32I\n\tRandValue\x12<\n\tRandValue\x12\x15.pkg_Rand.RandRequest\x1a\x16.pkg_Rand.RandResponse\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\nRand.proto\x12\x08pkg_Rand\"s\n\x0bRandRequest\x12\x10\n\x08SendText\x18\x01 \x01(\x08\x12\x12\n\nSendNumber\x18\x02 \x01(\x08\x12\x12\n\nTextLength\x18\x03 \x01(\x03\x12\x13\n\x0bNumberFloor\x18\x04 \x01(\x03\x12\x15\n\rNumberCeiling\x18\x05 \x01(\x03\",\n\x0cRandResponse\x12\x0c\n\x04Text\x18\x01 \x01(\t\x12\x0e\n\x06Number\x18\x02 \x01(\x03\x32J\n\nRandValues\x12<\n\tRandValue\x12\x15.pkg_Rand.RandRequest\x1a\x16.pkg_Rand.RandResponse\"\x00\x62\x06proto3')
 )
 
 
@@ -141,18 +141,18 @@ _sym_db.RegisterMessage(RandResponse)
 
 
 
-_RANDVALUE = _descriptor.ServiceDescriptor(
-  name='RandValue',
-  full_name='pkg_Rand.RandValue',
+_RANDVALUES = _descriptor.ServiceDescriptor(
+  name='RandValues',
+  full_name='pkg_Rand.RandValues',
   file=DESCRIPTOR,
   index=0,
   options=None,
   serialized_start=187,
-  serialized_end=260,
+  serialized_end=261,
   methods=[
   _descriptor.MethodDescriptor(
     name='RandValue',
-    full_name='pkg_Rand.RandValue.RandValue',
+    full_name='pkg_Rand.RandValues.RandValue',
     index=0,
     containing_service=None,
     input_type=_RANDREQUEST,
@@ -160,8 +160,8 @@ _RANDVALUE = _descriptor.ServiceDescriptor(
     options=None,
   ),
 ])
-_sym_db.RegisterServiceDescriptor(_RANDVALUE)
+_sym_db.RegisterServiceDescriptor(_RANDVALUES)
 
-DESCRIPTOR.services_by_name['RandValue'] = _RANDVALUE
+DESCRIPTOR.services_by_name['RandValues'] = _RANDVALUES
 
 # @@protoc_insertion_point(module_scope)

@@ -4,7 +4,7 @@ import grpc
 import Rand_pb2 as Rand__pb2
 
 
-class RandValueStub(object):
+class RandValuesStub(object):
   """service def
   """
 
@@ -15,13 +15,13 @@ class RandValueStub(object):
       channel: A grpc.Channel.
     """
     self.RandValue = channel.unary_unary(
-        '/pkg_Rand.RandValue/RandValue',
+        '/pkg_Rand.RandValues/RandValue',
         request_serializer=Rand__pb2.RandRequest.SerializeToString,
         response_deserializer=Rand__pb2.RandResponse.FromString,
         )
 
 
-class RandValueServicer(object):
+class RandValuesServicer(object):
   """service def
   """
 
@@ -33,7 +33,7 @@ class RandValueServicer(object):
     raise NotImplementedError('Method not implemented!')
 
 
-def add_RandValueServicer_to_server(servicer, server):
+def add_RandValuesServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'RandValue': grpc.unary_unary_rpc_method_handler(
           servicer.RandValue,
@@ -42,5 +42,5 @@ def add_RandValueServicer_to_server(servicer, server):
       ),
   }
   generic_handler = grpc.method_handlers_generic_handler(
-      'pkg_Rand.RandValue', rpc_method_handlers)
+      'pkg_Rand.RandValues', rpc_method_handlers)
   server.add_generic_rpc_handlers((generic_handler,))

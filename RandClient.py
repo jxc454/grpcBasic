@@ -9,10 +9,10 @@ import Rand_pb2_grpc
 def run():
     channel = grpc.insecure_channel('localhost:50051')
     stub = Rand_pb2_grpc.RandValuesStub(channel)
-    response = stub.RandValue(Rand_pb2.RandRequest(SendText=True, SendNumber=True))
+    response = stub.RandValue(Rand_pb2.RandRequest(SendText=True, SendNumber=True, TextLength=3, NumberFloor=10, NumberCeiling=55))
+    
     print("Random Number: " + str(response.Number))
     print("Random Text: " + response.Text)
-
 
 if __name__ == '__main__':
     run()

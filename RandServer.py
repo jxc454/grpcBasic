@@ -8,6 +8,8 @@ import grpc
 import Rand_pb2
 import Rand_pb2_grpc
 
+import scratch
+
 class RandValues(Rand_pb2_grpc.RandValuesServicer):
     def RandValue(self, request, context):
         returnText = ""
@@ -37,4 +39,5 @@ def serve():
         server.stop(0)
 
 if __name__ == '__main__':
-    serve()
+    scratch.scratchFunc()
+    # serve()

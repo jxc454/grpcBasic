@@ -17,3 +17,12 @@ def scratchFunc():
 
 def printArray(arr):
     print(', '.join([str(x) for x in arr]))
+
+def consume(val):
+    yield val + 1
+
+if __name__ == '__main__':
+    consumer = consume(None)
+    i = 0
+    while i < 10:
+        i += consume(i)

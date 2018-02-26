@@ -39,5 +39,5 @@ def serve():
         server.stop(0)
 
 if __name__ == '__main__':
-    scratch.scratchFunc()
-    # serve()
+    # scratch.scratchFunc()
+    serve()
